@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import {
 	StyleSheet,
-	Text,
-	View
+	View,
+	Image,
+	Button,
 } from 'react-native';
+import { Container, Text, Body } from 'native-base';
 
 const styles = StyleSheet.create({
 	container: {
@@ -17,11 +19,28 @@ const styles = StyleSheet.create({
 });
 
 export default class Profile extends Component {
+	/*static navigationOptions = {
+    tabBarLabel: 'Profile',
+    tabBarIcon: ({tintColor}) => {
+			return(
+				<MaterialIcons
+					name="card-membership"
+					size={24}
+					style={{color: tintColor}}
+				>
+				</MaterialIcons>
+			);
+		}
+  };*/
 	render() {
+		console.log("rajat.....");
 		return(
-			<View style={styles.container}>
-				<Text style={styles.text}>This is Profile Page</Text>
-			</View>
+				<Container>
+					<Button
+						title="click"
+						onPress={() => this.props.navigation.navigate('ProfileDetails')}>
+					</Button>
+				</Container>
 		);
 	}
 }
